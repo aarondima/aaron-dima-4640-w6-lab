@@ -1,5 +1,2 @@
-# 4640-w6-lab-start-w25
-
-Starter files for the week 6 lab, intro to Packer.
-
-See lab instructions on D2L for details.
+# ACIT-4640-Week-6-Lab
+![image](https://github.com/user-attachments/assets/8e8f7955-5669-4c34-9b56-8d3f416e404f)
