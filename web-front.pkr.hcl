@@ -51,7 +51,7 @@ build {
   provisioner "file" {
     # COMPLETE ME add the HTML file to your image
     source      = "./files/index.html"
-    destination = "/tmp/web/index.html"
+    destination = "/web/html/index.html"
   }
 
   provisioner "file" {
@@ -63,18 +63,18 @@ build {
   # COMPLETE ME add additional provisioners to run shell scripts and complete any other tasks
   provisioner "file" {
     source      = "./scripts/install-nginx"
-    destination = "/tmp/install-nginx"
+    destination = "/tmp/web/install-nginx"
   }
   provisioner "file" {
     source      = "./scripts/setup-nginx"
-    destination = "/tmp/setup-nginx"
+    destination = "/tmp/web/setup-nginx"
   }
   provisioner "shell" {
     inline = [
-      "sudo chmod u+x /tmp/install-nginx",
-      "sudo /tmp/install-nginx",
-      "sudo chmod u+x /tmp/setup-nginx",
-      "sudo /tmp/setup-nginx",
+      "sudo chmod +x /tmp/web/install-nginx",
+      "sudo /tmp/web/install-nginx",
+      "sudo chmod +x /tmp/web/setup-nginx",
+      "sudo /tmp/web/setup-nginx",
       "sudo systemctl reload nginx"
     ]
   }
